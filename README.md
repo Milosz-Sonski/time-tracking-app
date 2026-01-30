@@ -1,6 +1,6 @@
-# System Ewidencji Czasu Pracy (MERN Stack)
+# System Ewidencji Czasu Pracy
 
-Projekt inżynierski mający na celu automatyzację rozliczania czasu pracy w sektorze MŚP, zapewniający pełną zgodność z art. 149 Kodeksu Pracy.
+Fragment pracy licencjackiej mający na celu automatyzację rozliczania czasu pracy w sektorze MŚP, zapewniający pełną zgodność z art. 149 Kodeksu Pracy.
 
 ## 🚀 Technologie
 - **Frontend:** React.js, MUI (Material UI), Axios
