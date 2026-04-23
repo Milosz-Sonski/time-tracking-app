@@ -4,11 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { KindeProvider } from "@kinde-oss/kinde-auth-react";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <KindeProvider
+    clientId={process.env.REACT_APP_KINDE_CLIENT_ID}
+    domain={process.env.REACT_APP_KINDE_DOMAIN}
+    redirectUri={window.location.origin}
+    logoutUri={window.location.origin}
+  >
     <App />
-  </React.StrictMode>
+  </KindeProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

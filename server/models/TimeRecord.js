@@ -1,13 +1,17 @@
 const mongoose = require('mongoose');
 
 const TimeRecordSchema = new mongoose.Schema({
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+  userId: { type: String, required: true },
   actionType: { type: String, enum: ['START', 'STOP'], required: true },
-  // Server-side timestamping: czas jest generowany przez serwer, nie klienta! 
-  timestamp: { type: Date, default: Date.now }, 
+  timestamp: { type: Date, default: Date.now },
   metadata: {
     ipAddress: String,
     deviceInfo: String
+  },
+  workMode: {
+    type: String,
+    enum: ['STACJONARNA', 'ZADANIOWA', 'HYBRYDOWA', 'ZDALNA', 'ZMIANOWA', 'NOCNA'],
+    default: 'STACJONARNA'
   }
 });
 
