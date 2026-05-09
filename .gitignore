@@ -26,6 +26,9 @@ client/build/
 # Testowanie
 # ============================================
 /coverage
+playwright-report/
+test-results/
+blob-report/
 
 # ============================================
 # Logi
